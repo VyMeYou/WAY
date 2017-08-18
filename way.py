@@ -1,22 +1,16 @@
 """Pet project to explore objects introspection
-in more human language approach for self learning porpouses.
-In no means it compares to the
-https://docs.python.org/3.5/library/inspect.html 
-
+in more human language approach for self learning purposes.
+In no means it compares to the flexibility and versatility of
+Inspect module
+https://docs.python.org/3.5/library/inspect.html
 """
 
 import inspect
-import logging #!!! Not implamented so far
+import logging
 
-def Namer(nm):
-    """What is your name"""
-    if hasattr(nm, "__name__"):         
-        return nm.__name__
-    else:
-        return nm.__class__.__name__ 
     
 class WAY:
-    """Who are you"""
+    """Who Are You"""
     def __init__(self, obj):
         self.obj = obj
         
@@ -95,34 +89,6 @@ def ArgParent(ob, arg):
                 return k
                 
 
-def DataCheck(cl):
-    a = WAY(cl)
-    print(a.WIYN())
-    print(a.WIYI())
-    print(a.WAYA())
-    print(a.WAYP())
-    print(a.WIYT())
-    print(a.WAYFP())
-    #print(a.WAYFPtest())
-    print(a.WAYAV())
-    print(a.WAYAA())
-    
-def DataCheck_A(cl):
-    a = WAY(cl)
-    print(a.WAYFPtest())
-
-def ArgObjName(ob, arg):
-    """Returns object that has certain argument"""
-    a = WAY(ob)    
-    for k, v in a.WAYFPtest().items():
-        for item in v:
-            if item==arg:
-                return k
-                
-class b:
-    pass
-f = b()
-DataCheck(f)
 
                 
                 
